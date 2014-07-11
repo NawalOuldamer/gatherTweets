@@ -5,6 +5,7 @@ Created on Tue Jul  8 09:30:55 2014
 @author: balikasg
 """
 from  twitter import *
+import json
 
 yourKeyword="jobs statistics" #the spaces are like AND <-- tweets with both jobs and statistics will be returned, in case you want OR use commas e.g. "jobs,statistics"
 
