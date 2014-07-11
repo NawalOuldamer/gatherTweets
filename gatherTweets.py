@@ -16,13 +16,16 @@ auth=OAuth(consumer_key='%%%',
            token_secret='%%%') #authentication parameters of your application. Replace %%% with your tokens
 
 
-def myStream(yourKeyword):        
-    ts=TwitterStream(auth=auth) # Initialize the twitter srteam
-    iterator=ts.statuses.filter(track=yourKeyword) #Start gathering tweets
-    ur, cnt=[], 0
-    for item in iterator: #Do something with the tweets, HEre we jus save them in the memory and we count them.
-        ur.append(item)
-        cnt+=1
-        if cnt % 20 ==0:
-            print cnt
+       
+ts=TwitterStream(auth=auth) # Initialize the twitter srteam
+iterator=ts.statuses.filter(track=yourKeyword) #Start gathering tweets
+ur, cnt=[], 0
+for item in iterator: #Do something with the tweets, HEre we jus save them in the memory and we count them.
+  ur.append(item)
+  cnt+=1 # The first file will have 9999 tweets!
+  if cnt % 10000 ==0:
+    print cnt
+    with open('tweetsVol%d.json' %cnt/10000, 'w') as out:
+      json.dump(ur, out, indent=2)
+    ur=list()
 
