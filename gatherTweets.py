@@ -10,10 +10,10 @@ yourKeyword="jobs statistics" #the spaces are like AND <-- tweets with both jobs
 
 
 #We need the authentication parameters of your application. Register an application at https://dev.twitter.com/
-auth=OAuth(consumer_key=' J89TwB986mgGAIClYCQ1JyuMV', 
-           consumer_secret='bQ4QpnGdV4e3F57fP75zBbTo5AgnJVmtfsSGZ7wGRiz2BVywIk', 
-           token='2168268127-BGgyopLJB4VWxHjCqzhG4bH4x7gNZ0KHWdUw82m', 
-           token_secret='B2ycW4AZ3KT2ACXAU6aRcnG07SOuJsv5sFALbZ6lV3xMd') #authentication parameters of your application
+auth=OAuth(consumer_key='%%%', 
+           consumer_secret='%%%', 
+           token='%%%%%', 
+           token_secret='%%%') #authentication parameters of your application. Replace %%% with your tokens
 
 
 def myStream(yourKeyword):        
